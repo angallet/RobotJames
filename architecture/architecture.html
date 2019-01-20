@@ -78,11 +78,73 @@
           <hr>
 
           <!-- Post Content -->
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+          <p class="lead">We used the following devices and sensors:
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+    4 motors
+    Gyroscope
+    Ultrasonic sensor
+    Color and light sensor
+    
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
+The number of motors and sensors available was limited by the number of ports and
+by the architecture itself, as adding too many components would yield serious
+issues in terms of mobility, speed and precision. 
+           
+            For instance, we noticed that
+if the robot was particularly heavy the wheel’s axel would be deformed as a
+consequence, yielding problems such as impossibility to maintain a certain
+direction precisely or causing the robot to turn slightly left or right when the
+motors were started. 
+            Moreover, we noticed that the motors would be more
+imprecise when it came to turn left or right if the weight over the wheels
+wouldn’t be evenly distributed. In order to solve these problem we tried several architectures until we achieved a satisfying one.
+
+The adopted architecture allows to distribute the weight in a more even way
+between the two wheels and the metal ball, as they are evenly distantiated with respect to the center of mass of the ev3dev board and as the distance between them is approximately the same. Also, stability is greatly improved by placing the ev3dev board in parallel with respect to the axel. This choice also allowed us to use all the available ports and to connect an additional motor used to turn the ultrasonic sensor, placed in the front. Lastly, the color sensor was mounted on top of the ultrasonic sensor while the gyroscope was placed on top of the ev3dev board, close to the brick itself since we noticed that this reduced vibrations and increased precision.
+Motors
+
+Two motors where used to turn the wheels, which are placed in the front.
+
+During the early testing phases we realized that the two motors would mostly
+start asynchronously, hence causing the robot to turn slightly left or right in
+a random fashion each time it would start moving. This was due to the axis
+distortion caused by the weight of the EV3 board and of the other robot parts
+mounted on top. Placing the wheels in the front and the metal ball in the back
+allowed us to greatly mitigate this problem, as they now occupy a central
+position and hence unwanted torques are minimized when turning,
+resulting in a higher precision.
+
+The third motor was used to turn the axle connected to two LEGO
+mechanical arms mounted in the back. Turning the axle would result in either
+lifting or lowering the mechanical arms. This mechanism was exploited in order to hold and release the non movable object within the arena.
+
+The fourth motor was placed in the front, on top of the ultrasonic sensor, in
+order to allow its rotation. This apparently cumbersome choice was adopted
+during later stages of the project as we came to the conclusion that having the
+robot turning left and right in order to scan its surroundings was too risky, as
+it would often bump into non moveable objects or against the arena’s
+walls by doing so.
+            
+Gyroscope
+
+The gyroscope was mounted on top of the robot, on a stable place. We used it for
+recalibration purposes and in order to make the robot turn to a certain angle with a good precision
+For instance, we used the gyroscope to associate a certain angle to each
+ultrasonic sensor reading.
+            
+            
+Ultrasonic sensor
+
+The ultrasonic sensor was used to scan the area from one side to another in order to detect the ball and the walls, borders and in order to locate the ball to get. Although the sensor is in principle capable of measuring distances up to 250 cm, after careful testing we realized that, past 20 cm, the sensor is not reliable any longer. This issue was most likely due to echoes from corner which would confound the sensor at distances larger than 20 cm.
+
+We decided to make the robot stop when the distance was reached and the ball was detected by the color sensor.
+After this, the robot moves backward in order to make sure that it won’t bump into additional walls or obstacles which may be around.
+            
+            
+Color and light sensor
+
+This sensor, placed in the front of the robot, was used to detect the presence of the balls and acknowledge their presence, since the project assignment specified that moveable objects are always colored balls. The output of this sensor is read every time the ultrasonic sensor detects an obstacle in front of
+the robot in order to distinguish between a ball or a wall.</p>
 
           <blockquote class="blockquote">
             <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
