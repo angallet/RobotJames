@@ -56,6 +56,41 @@
     
 
 
+
+Please notice that the following guide takes for granted that you’re running Linux. The source code for our project is hosted at https://github.com/PaoloMonti42/PicchioOS.
+
+In order to download it enter the path where you would like to place the folder containing the code and run:
+
+git clone 
+
+Then you may either download the whole source code inside the robot and compile it internally or use docker on your machine in order to cross compile it and then download the code inside the robot.
+
+First of all make sure that your computer is connected to the robot via either wi-fi or bluetooth connection. Then, if you want to compile the source code internally, from the chosen installation path type the following commands on the terminal:
+
+scp -r ./OS_Rover_APA robot@ROBOT_ADDRESS:~
+
+ssh robot@ROBOT_ADDRESS
+
+(insert ev3dev password)
+
+cd OS_Rover_APA
+
+make
+
+make run
+
+If you choose instead to cross compile run the following commands, again assuming that you start from the chosen installation path:
+
+cd OS_Rover_APA
+
+docker run -rm -it -h ev3 -v $(echo $PWD):/src -w /src ev3cc /bin/bash
+
+cd ev3dev-c/source/ev3/
+
+make
+
+
+
   
 
 
