@@ -56,12 +56,13 @@
     
 
 
-
+<center>
 Please notice that the following guide takes for granted that you’re running Linux. The source code for our project is hosted on gitlab.
 
 In order to download it enter the path where you would like to place the folder containing the code and run:
 
 git clone 
+  <br />
 
 Then you may either download the whole source code inside the robot and compile it internally or use docker on your machine in order to cross compile it and then download the code inside the robot.
 
@@ -69,28 +70,28 @@ First of all make sure that your computer is connected to the robot via either w
 
 scp -r ./OS_Rover_APA robot@ROBOT_ADDRESS:~
 
-ssh robot@ROBOT_ADDRESS
+ssh robot@ROBOT_ADDRESS<br />
 
-(insert ev3dev password)
+(insert ev3dev password)<br />
 
-cd OS_Rover_APA
+cd OS_Rover_APA<br />
 
-make
+make<br />
 
-make run
+make run<br />
 
 If you choose instead to cross compile run the following commands, again assuming that you start from the chosen installation path:
+<br />
+cd OS_Rover_APA<br />
 
-cd OS_Rover_APA
+docker run -rm -it -h ev3 -v $(echo $PWD):/src -w /src ev3cc /bin/bash<br />
 
-docker run -rm -it -h ev3 -v $(echo $PWD):/src -w /src ev3cc /bin/bash
+cd ev3dev-c/source/ev3/<br />
 
-cd ev3dev-c/source/ev3/
-
-make
+make<br />
 
 
-
+         </center>
       </p>
     </div>
 
