@@ -1,3 +1,10 @@
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,8 +36,8 @@
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
         <a class="navbar-brand" href="http://soc.eurecom.fr/OS/projects_fall2018.html"> Project Description</a>
-        <a class="btn btn-primary" href="index.html"> Back go to menu !</a>
-        
+        <a class="btn btn-primary" href="gallery/pictures.html"> See us winning !</a>
+    
       </div>
     </nav>
 
@@ -40,9 +47,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5">Source code available soon !</h1>
-            <a class="btn btn-primary" href="https://gitlab.eurecom.fr/monniot/OS_Rover_APA"> Go to GitHub</a>
-              <p class="lead mb-0">Source code : The code is divided in a module for each main part. The source code of LebotJames is soon available on Eurecom's GitLab..</p>
+            <h1 class="mb-5">Build a robot able to win a Basketball Game!</h1>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
    
@@ -50,8 +55,17 @@
         </div>
       </div>
     </header>
-    <div class="col-lg- order-lg-2 my-auto showcase-text">
-       <p class="lead mb-0">Source code : First of all, we suggest you to create your own Makefile, which should automatically compile your sources and generate the executable that you can send to the robot in the robot using an SSH connection. You may find an example of  Makefile in our Github repository.
+
+
+    <!-- Image Showcases -->
+    <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/lego.jpg');"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>A robot made with simple and efficient ideas</h2>
+            <p class="lead mb-0"> ource code : First of all, we suggest you to create your own Makefile, which should automatically compile your sources and generate the executable that you can send to the robot in the robot using an SSH connection. You may find an example of  Makefile in our Github repository.
     
     
 
@@ -93,11 +107,49 @@ make<br />
 
          </center>
       </p>
-    </div>
+   </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+          <div class="col-lg-6 my-auto showcase-text">
+            <h2>Adapted from the best and simplest strategy </h2>
+            <p class="lead mb-0">Newly improved, and full of great features the robot is able to throw the balls and score 3 points each time !</p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>Easy to Use </h2>
+            <p class="lead mb-0"> Just clone our repository and follow instructions, you will be ready to go!</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-
-
+  
+    <!-- Call to Action -->
+    <section class="call-to-action text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form>
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+                </div>
+                <div class="col-12 col-md-3">
+                  <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer bg-light">
