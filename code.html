@@ -62,10 +62,10 @@
       <div class="container-fluid p-0">
         <div class="row no-gutters">
 
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/lego.jpg');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>A robot made with simple and efficient ideas</h2>
-            <p class="lead mb-0"> ource code : First of all, we suggest you to create your own Makefile, which should automatically compile your sources and generate the executable that you can send to the robot in the robot using an SSH connection. You may find an example of  Makefile in our Gitlab repository <a class="btn btn-primary" href="https://gitlab.eurecom.fr/monniot/OS_Rover_APA"> See Gitlab here</a>.
+            <p class="lead mb-0"> Source code : First of all, we suggest you to create your own Makefile, which should automatically compile your sources and generate the executable that you can send to the robot in the robot using an SSH connection. You may find an example of  Makefile in our Gitlab repository <a class="btn btn-primary" href="https://gitlab.eurecom.fr/monniot/OS_Rover_APA"> See Gitlab here</a>.
     
     
 
@@ -86,34 +86,31 @@ Please notice that the following guide takes for granted that you’re running L
             <h2>Adapted from the best and simplest strategy </h2>
             <p class="lead mb-0">In order to download it enter the path where you would like to place the folder containing the code and run:
 
-git clone 
+
+<pre>git clone git@gitlab.eurecom.fr:monniot/OS_Rover_APA.git
+</pre>
   <br />
 
 Then you may either download the whole source code inside the robot and compile it internally or use docker on your machine in order to cross compile it and then download the code inside the robot.
 
 First of all make sure that your computer is connected to the robot via either wi-fi or bluetooth connection. Then, if you want to compile the source code internally, from the chosen installation path type the following commands on the terminal:
-
-scp -r ./OS_Rover_APA robot@ROBOT_ADDRESS:~
-
-ssh robot@ROBOT_ADDRESS<br />
-
-(insert ev3dev password)<br />
-
-cd OS_Rover_APA<br />
-
-make<br />
-
-make run<br />
-
-If you choose instead to cross compile run the following commands, again assuming that you start from the chosen installation path:
 <br />
-cd OS_Rover_APA<br />
 
-docker run -rm -it -h ev3 -v $(echo $PWD):/src -w /src ev3cc /bin/bash<br />
 
-cd ev3dev-c/source/ev3/<br />
+<pre>ssh robot@ROBOT_ADDRESS </pre><br />
 
-make<br /></p>
+              In a new terminal:
+
+<pre>cd OS_Rover_APA</pre><br />
+
+<pre>make docker</pre> <br />
+              
+ It will open the compiler:
+              <pre>docker run --rm -it -h ev3 -v ~/OS_Rover_APA/:/src -w /src ev3cc /bin/bash
+</pre>
+
+
+<pre>make</pre><br /></p>
           </div>
         </div>
         <div class="row no-gutters">
@@ -127,29 +124,7 @@ make<br /></p>
     </section>
 
   
-    <!-- Call to Action -->
-    <section class="call-to-action text-white text-center">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-          </div>
-          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <form>
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-                </div>
-                <div class="col-12 col-md-3">
-                  <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Footer -->
     <footer class="footer bg-light">
