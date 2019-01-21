@@ -64,14 +64,14 @@
 
           <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>A robot made with simple and efficient ideas</h2>
+            <h2>Easy to use : get the code</h2>
             <p class="lead mb-0"> Source code : First of all, we suggest you to create your own Makefile, which should automatically compile your sources and generate the executable that you can send to the robot in the robot using an SSH connection. You may find an example of  Makefile in our Gitlab repository <a class="btn btn-primary" href="https://gitlab.eurecom.fr/monniot/OS_Rover_APA"> See Gitlab here</a>.
     
     
 
 
 <center>
-Please notice that the following guide takes for granted that you’re running Linux. The source code for our project is hosted on gitlab.
+Please notice that the following guide takes for granted that you’re running Linux. The source code for our project is hosted on gitlab. Do not forget to get the server code also and run it.
 
 
 
@@ -83,7 +83,7 @@ Please notice that the following guide takes for granted that you’re running L
         <div class="row no-gutters">
           <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
           <div class="col-lg-6 my-auto showcase-text">
-            <h2>Adapted from the best and simplest strategy </h2>
+            <h2>Easy to use: compile the code </h2>
             <p class="lead mb-0">In order to download it enter the path where you would like to place the folder containing the code and run:
 
 
@@ -93,13 +93,13 @@ Please notice that the following guide takes for granted that you’re running L
 
 Then you may either download the whole source code inside the robot and compile it internally or use docker on your machine in order to cross compile it and then download the code inside the robot.
 
-First of all make sure that your computer is connected to the robot via either wi-fi or bluetooth connection. Then, if you want to compile the source code internally, from the chosen installation path type the following commands on the terminal:
+First of all make sure that your computer is connected to the robot via  bluetooth connection. Then, if you want to compile the source code internally, from the chosen installation path type the following commands on the terminal:
 <br />
 
 
-<pre>ssh robot@ROBOT_ADDRESS </pre><br />
 
-              In a new terminal:
+
+              
 
 <pre>cd OS_Rover_APA</pre><br />
 
@@ -109,15 +109,23 @@ First of all make sure that your computer is connected to the robot via either w
               <pre>docker run --rm -it -h ev3 -v ~/OS_Rover_APA/:/src -w /src ev3cc /bin/bash
 </pre>
 
-
-<pre>make</pre><br /></p>
+<pre>make install blue</pre><br /
+<pre>make</pre><br />
+          In a new terminal :<br />
+          <pre>scp main robot@ADRESS:</pre><br />
+          Check the main is sent to the robot!
+            
+            
+            </p>
           </div>
         </div>
         <div class="row no-gutters">
           <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>Easy to Use </h2>
-            <p class="lead mb-0"> Just clone our repository and follow instructions, you will be ready to go!</p>
+            <p class="lead mb-0"> <pre>ssh robot@ROBOT_ADDRESS </pre><br />!</p>
+          and then you can run the code using : <br />
+          <pre>robot@ev3dev:~$./main </pre><br />
           </div>
         </div>
       </div>
