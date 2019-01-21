@@ -78,20 +78,29 @@
             <blockquote> throw() <br />
            turn motor left() <br />
             throw() } <br /> 
-          </blockquote></pre></p>
+          </blockquote>}</pre></p>
         <br />
         <p> Then we have two functions for searching the ball. We divide the space in two parts :left and right. 
-          The following pseudo code explain the principle:</p><br />
+          The following pseudo code explain the principle for the right side:</p><br />
         <p><pre>searchballright() {<br />
-           <blockquote> while (angle <90°):<br />
+           <blockquote> while (angle <90 degres):<br />
               searchball(treshold) <br />
             if found: <br />
               flagdetected=1
               break
               throw() <br /> 
-
+              
           </blockquote>
-          </pre></p>
+          <blockquote> if flag detected:<br />
+                        turn (180 degres)
+                        getball()
+                        turn(180 degres)
+                  </blockquote>
+              <blockquote>turn (initial position)</blockquote>
+              <blockquote> if flag detected and flag_ball_caught:
+                              throw()
+                              </blockquote>
+          }</pre></p>
         <br />
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
