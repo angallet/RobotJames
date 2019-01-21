@@ -1,1 +1,192 @@
 
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Robot James -Team 2 </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand" href="http://soc.eurecom.fr/OS/projects_fall2018.html"> Project Description</a>
+        <a class="btn btn-primary" href="gallery/pictures.html"> See us!</a>
+        <a class="btn btn-primary" href="index.html"> home</a>
+    
+      </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Build a robot able to win a Basketball Game!</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+   
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Image Showcases -->
+    <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('gallery/imageslide/slide1.jpg');"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>Easy to use : get the code</h2>
+            <p class="lead mb-0"> Source code : First of all, we suggest you to create your own Makefile, which should automatically compile your sources and generate the executable that you can send to the robot in the robot using an SSH connection. You may find an example of  Makefile in our Gitlab repository <a class="btn btn-primary" href="https://gitlab.eurecom.fr/monniot/OS_Rover_APA"> See Gitlab here</a>.
+    
+    
+
+
+<center>
+Please notice that the following guide takes for granted that you’re running Linux. The source code for our project is hosted on gitlab. Do not forget to get the server code also and run it.
+
+
+
+
+         </center>
+      </p>
+   </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('gallery/imageslide/slide2.jpg');"></div>
+          <div class="col-lg-6 my-auto showcase-text">
+            <h2>Easy to use: compile the code </h2>
+            <p class="lead mb-0">In order to download it enter the path where you would like to place the folder containing the code and run:
+
+
+<pre>git clone git@gitlab.eurecom.fr:monniot/OS_Rover_APA.git
+</pre>
+  <br />
+
+Then you may either download the whole source code inside the robot and compile it internally or use docker on your machine in order to cross compile it and then download the code inside the robot.
+
+First of all make sure that your computer is connected to the robot via  bluetooth connection. Then, if you want to compile the source code internally, from the chosen installation path type the following commands on the terminal:
+<br />
+
+
+
+
+              
+
+<pre>cd OS_Rover_APA</pre><br />
+
+<pre>make docker</pre> <br />
+              
+ It will open the compiler:
+              <pre>docker run --rm -it -h ev3 -v ~/OS_Rover_APA/:/src -w /src ev3cc /bin/bash
+</pre>
+
+<pre>make install blue</pre><br />
+<pre>make</pre><br />
+          In a new terminal :<br />
+          <pre>scp main robot@ADRESS:</pre><br />
+          Check the main is sent to the robot!
+            
+            
+            </p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('gallery/imageslide/slide1.jpg');"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>Easy to Use </h2>
+            <p class="lead mb-0"> <pre>ssh robot@ROBOT_ADDRESS </pre><br />!</p>
+          and then you can run the code using : <br />
+          <pre>robot@ev3dev:~$./main </pre><br />
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    
+
+    <!-- Footer -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <ul class="list-inline mb-2">
+              <li class="list-inline-item">
+                <a href="#">About</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Contact</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+            <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2018. All Rights Reserved.</p>
+          </div>
+          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fab fa-facebook fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-instagram fa-2x fa-fw"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
