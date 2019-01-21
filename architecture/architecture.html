@@ -93,7 +93,7 @@ imprecise when it came to turn left or right if the weight over the wheels
 wouldn’t be evenly distributed. In order to solve these problem we tried 
             several architectures until we achieved a satisfying one.
           </p> <br />
-          <p>
+          <p><img class="img-fluid rounded" src="2.jpg" ><br />
 The adopted architecture allows to distribute the weight in a more even way
 between the two wheels and the metal ball,  with respect to the center of mass of
           the ev3dev block and as the distance between them is approximately the same. 
@@ -109,8 +109,8 @@ between the two wheels and the metal ball,  with respect to the center of mass o
           </p><br />
           <p><h1><center>
           Motors</center></h1>
-<br />
-          <img class="img-fluid rounded" src="3.jpg" >
+<br /><img class="img-fluid rounded" src="motorside.jpg" ><br />
+          
 Two big motors where used to turn the wheels, which are placed in the front of the robot. They also ensure stability.<br />
           <p>
  Placing the wheels in the front and the metal ball in the back
@@ -118,10 +118,12 @@ allowed us to greatly mitigate the problem of imprecision of turning, as they no
 position . Hence unwanted torques are minimized when turning,
             resulting in a higher precision.</p>
 <br /><p>
+          <img class="img-fluid rounded" src="motorfront.jpg" ><br />
 The third big motor was used to turn the axle connected to two LEGO
 mechanical arms mounted in the back. Turning the axle could allow us to pick up the ball placed in front of the robot.
           This mechanism was exploited in order to hold and release the non movable object within the arena. This motor is used synchronously with the fourth motor in order to complete the picking up and throwing ball part.
           <br /></p>
+          <img class="img-fluid rounded" src="motortop.jpg" ><br />
           <p>
 The fourth motor was placed at the top,  in
 order to allow the rotation of the catapult. This motor is essential. It turns rapidly and permit the robot to throw the ball 30-40 cm away from the robot .
@@ -139,7 +141,7 @@ For instance, we used the gyroscope to associate a certain angle to each
            <br />
             <center><h1>
               Ultrasonic sensor</h1></center>
-<br />
+<br /><img class="img-fluid rounded" src="sensorultra.jpg" ><br />
           <p>
 The ultrasonic sensor was used to scan the area from one side to another in order to detect the ball and the walls, borders and in order to locate the ball to get. Although the sensor is in principle capable of measuring distances up to 250 cm, after careful testing we realized that, past 20 cm, the sensor is not reliable any longer. This issue was most likely due to echoes from corner which would confound the sensor at distances larger than 20 cm.
 <br />
@@ -148,7 +150,7 @@ After this, the robot moves backward in order to make sure that it won’t bump 
             <br />    </p>  
          <center><h1>   
 Color  sensor</h1></center>
-<br /><p>
+<br /><img class="img-fluid rounded" src="sensorcolor.jpg" ><br />p>
 This sensor, placed in the back of the robot just in front of the catapult, was used to detect the the balls 
           and acknowledge their presence, since the project assignment specified that moveable objects 
           are always colored balls. The output of this sensor is read every time the ultrasonic sensor detects 
