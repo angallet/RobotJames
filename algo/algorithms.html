@@ -72,7 +72,9 @@
             connected to all the other ones. The structure of the code is divided in three parts: one for bluetooth connection using a thread,
           one for the main function of the program, the last one for the use of the motors to complete the actions</p>
           <p><center><h1>Main functions</h1></center></p>
-          <p>Concerning the functions used, there are 3 main functions called in the main, the first one enables the catapult in order to throw the 2 balls from the beginning. </p><br />
+          <p>Concerning the functions used, there are 3 main functions called in the main, the first one called <pre>initial throw()</pre>
+          enables the catapult in order to throw the 2 balls from the beginning. <br />
+          The second and the third one : <pre> search_ball_right() </pre> and <pre> search_ball_left() </pre> describes how the robot searches for the ball.</p><br />
           
           <p><pre><blockquote>initialthrow() {
             throw () 
@@ -82,7 +84,7 @@
         <br />
         <p> Then we have two functions for searching the ball. We divide the space in two parts :left and right. 
           The following pseudo code explain the principle for the right side(which could be easily reproduce with the left side):</p><br />
-        <p><pre><blockquote>searchballright() {
+        <p><pre><blockquote>search_ball_right() {
           while (angle <90 degres){
               searchball(treshold) 
               if found: 
@@ -104,7 +106,8 @@
           }</pre></p>
         <br />
 
-          <p>To get more details, here is described the get functions used for picking up the balls</p>
+          <p>To get more details in the previous main functions used, here is described the action
+          functions used for picking up the balls</p>
  <p><pre><blockquote>getball () {
             disable_catapult () 
             move_forward () 
