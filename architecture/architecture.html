@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Discover the Archiecture </a>
+        <a class="navbar-brand" href="#">Discover the Architecture </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,7 +48,7 @@
         <div class="col-lg-8">
 
           <!-- Title -->
-          <h1 class="mt-4">Use of sensors and motors</h1>
+          <h1 class="mt-4">How we used sensors and motors</h1>
 
    
           <hr>
@@ -85,7 +85,9 @@ by the architecture itself, as adding too many components would yield serious
 if the robot was particularly heavy the wheel’s axel would be deformed as a
 consequence, yielding problems such as impossibility to maintain a certain
 direction precisely or causing the robot to turn slightly left or right when the
-motors were started. 
+            motors were started. </p><br />
+          <p>
+            Moreover, we rapidly went to a simple and efficient solution : using a catapult to throw the balls.
             Moreover, we noticed that the motors would be more
 imprecise when it came to turn left or right if the weight over the wheels
 wouldn’t be evenly distributed. In order to solve these problem we tried 
@@ -108,30 +110,22 @@ between the two wheels and the metal ball,  with respect to the center of mass o
           <p><h1><center>
           Motors</center></h1>
 <br />
-Two motors where used to turn the wheels, which are placed in the front.
-<br />
+Two big motors where used to turn the wheels, which are placed in the front of the robot. They also ensure stability.<br />
           <p>
-During the early testing phases we realized that the two motors would mostly
-start asynchronously, hence causing the robot to turn slightly left or right in
-a random fashion each time it would start moving. This was due to the axis
-distortion caused by the weight of the EV3 board and of the other robot parts
-mounted on top. Placing the wheels in the front and the metal ball in the back
-allowed us to greatly mitigate this problem, as they now occupy a central
-position and hence unwanted torques are minimized when turning,
+ Placing the wheels in the front and the metal ball in the back
+allowed us to greatly mitigate the problem of imprecision of turning, as they now occupy a central
+position . Hence unwanted torques are minimized when turning,
             resulting in a higher precision.</p>
 <br /><p>
-The third motor was used to turn the axle connected to two LEGO
-mechanical arms mounted in the back. Turning the axle would result in either
-lifting or lowering the mechanical arms. This mechanism was exploited in order to hold and release the non movable object within the arena.
+The third big motor was used to turn the axle connected to two LEGO
+mechanical arms mounted in the back. Turning the axle could allow us to pick up the ball placed in front of the robot.
+          This mechanism was exploited in order to hold and release the non movable object within the arena. This motor is used synchronously with the fourth motor in order to complete the picking up and throwing ball part.
           <br /></p>
           <p>
-The fourth motor was placed in the front, on top of the ultrasonic sensor, in
-order to allow its rotation. This apparently cumbersome choice was adopted
-during later stages of the project as we came to the conclusion that having the
-robot turning left and right in order to scan its surroundings was too risky, as
-it would often bump into non moveable objects or against the arena’s
-walls by doing so.
-          </p>
+The fourth motor was placed at the top,  in
+order to allow the rotation of the catapult. This motor is essential. It turns rapidly and permit the robot to throw the ball 30-40 cm away from the robot .
+          This motor opens the catapult'arm before picking up ball. Then it turns in reverse sense in order to get back at the starting position.
+          Finally the third motor turns once again so that the ball falls in the catapult'arm. The catapult's motor turns again in order to throw the ball.</p>
         <br />    
           <center><h1>
             Gyroscope</h1></center>
