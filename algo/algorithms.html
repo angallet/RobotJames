@@ -115,7 +115,13 @@
             move_backward ()
           </blockquote>}</pre></p>
         <br />
-
+<p>Finally, for the communication with the server, we reorganized the code in 3 functions : <br />
+      One is used for initializing the bluetooth connection <pre> init_bluetooth() </pre> 
+      Then we have a function <pre> read_from_server()</pre> which is used to read the bytes received from the server.
+      and one for sending the score to the server (this function is called in the throw function so that each time the robot
+      throws a ball, it informs the server: <pre> robotscore ()</pre> </p>
+    <p>All these functions are used in a thread <pre> *mybluetooth </pre> </p>
+    
           <!-- Comments Form -->
           <div class="card my-4">
             <h5 class="card-header">Leave a Comment:</h5>
